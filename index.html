@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Browser</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Emoji Browser</h1>
+        <input type="text" id="search-bar" placeholder="Search emojis by name...">
+        <label for="category-filter">Filter by Category:</label>
+        <select id="category-filter"></select>
+        <label for="cards-per-page">Cards per Page:</label>
+        <select id="cards-per-page">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+        </select>
+    </header>
+    <main>
+        <div class="emoji-container" id="emoji-container"></div>
+        <div class="pagination" id="pagination"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

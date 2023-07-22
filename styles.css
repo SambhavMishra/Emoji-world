@@ -1,0 +1,174 @@
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #3ea7d8;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    color: white;
+    font-size: 48px;
+    margin-top: -8px;
+}
+
+
+#search-bar {
+    display: block;
+    top: 5%;
+    left: 50%;
+    transform: translate(50%, -50%);
+    width: 50%;
+    height: 40px;
+    font-size: 18px;
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.emoji-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.emoji-card {
+    border: 2px solid #333;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    width: 250px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.emoji-card span {
+    font-size: 64px;
+}
+
+.category-filter {
+    width: 480px;
+    height: 40px;
+    border: 2px double lightblue;
+}
+
+header label {
+    font-size: 24px;
+}
+
+#category-filter {
+    height: 40px;
+    width: 480px;
+    font-size: 24px;
+    border: 2px solid lightblue;
+    border-radius: 5px;
+}
+
+#cards-per-page {
+    height: 40px;
+    width: 240px;
+    font-size: 24px;
+    border: 2px solid lightblue;
+    border-radius: 5px;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #3ea7d8;
+    padding: 10px;
+}
+
+.pagination button {
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 2px 1px;
+    width: 55px; 
+    height: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination button.active {
+    background-color: #007BFF;
+    color: #fff;
+    font-weight: bold;
+}
+
+.pagination button:hover {
+    background-color: #ddd;
+}
+
+.pagination button:not(:first-child) {
+    margin-left: 5px;
+}
+
+
+/* Responsive Styles for Tablet */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    .emoji-card {
+        width: 40%;
+    }
+
+    #category-filter, #cards-per-page {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Responsive Styles for Smartphone */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .emoji-card {
+        width: 80%;
+    }
+
+    #category-filter, #cards-per-page {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .pagination {
+        padding: 5px;
+    }
+
+    .pagination button {
+        padding: 3px 8px;
+        margin: 2px;
+        width: 40px;
+        height: 20px;
+    }
+}
